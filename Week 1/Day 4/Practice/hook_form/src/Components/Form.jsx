@@ -24,58 +24,23 @@ const Form = () => {
           <form>
             <div className="mb-3">
               <label htmlFor="firstName" className="form-label">First Name:</label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                className="form-control"
-                value={Data.firstName}
-                onChange={displayData}
-              />
+              <input type="text" name="firstName" className="form-control" value={Data.firstName} onChange={displayData} />
             </div>
             <div className="mb-3">
               <label htmlFor="lastName" className="form-label">Last Name:</label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                className="form-control"
-                value={Data.lastName}
-                onChange={displayData}
-              />
+              <input type="text" name="lastName" className="form-control" value={Data.lastName} onChange={displayData} />
             </div>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="form-control"
-                value={Data.email}
-                onChange={displayData}
-              />
+              <input type="email" name="email" className="form-control" value={Data.email} onChange={displayData} />
             </div>
             <div className="mb-3">
               <label htmlFor="password" className="form-label">Password:</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                className="form-control"
-                value={Data.password}
-                onChange={displayData}
-              />
+              <input type="password" name="password" className="form-control" value={Data.password} onChange={displayData} />
             </div>
             <div className="mb-3">
               <label htmlFor="confirmPassword" className="form-label">Confirm Password:</label>
-              <input
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                className="form-control"
-                value={Data.confirmPassword}
-                onChange={displayData}
-              />
+              <input type="password" name="confirmPassword" className="form-control" value={Data.confirmPassword} onChange={displayData} />
             </div>
           </form>
           <div>
