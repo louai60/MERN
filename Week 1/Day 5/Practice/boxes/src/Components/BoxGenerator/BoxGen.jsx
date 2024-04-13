@@ -14,7 +14,7 @@ const BoxGen = () => {
   return (
     <div className="container">
       <form onSubmit={SubmitHandler}>
-        <label htmlFor="color">Color: </label>
+        <label>Color: </label>
         <input
           type="text"
           id="color"
@@ -25,7 +25,7 @@ const BoxGen = () => {
       </form>
       <div className="box-container">
         {boxes.map((boxColor, idx) => (
-          <div key={idx} className={`box`} style={{ backgroundColor: boxColor }} />
+          <div key={idx} className={'box'} style={{ backgroundColor: boxColor }} />
         ))}
       </div>
     </div>
