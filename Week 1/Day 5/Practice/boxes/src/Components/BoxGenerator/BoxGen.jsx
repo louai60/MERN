@@ -6,7 +6,7 @@ const BoxGen = () => {
   const [color, setColor] = useState('');
 
   const SubmitHandler = (e) => {
-    e.prevent();
+    e.preventDefault();
     setBoxes([...boxes, color]);
     setColor(''); 
   };
