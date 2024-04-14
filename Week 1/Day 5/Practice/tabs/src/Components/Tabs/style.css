@@ -1,0 +1,33 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin: 50px;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    padding: 10px 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+
+}
+
+.nav-item.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.content {
+    padding: 50px 50px;
+    border: 1px solid #ddd;
+}
+
+.content-item.hidden {
+    display: none;
+}
