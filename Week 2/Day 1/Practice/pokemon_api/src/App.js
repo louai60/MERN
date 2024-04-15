@@ -3,19 +3,19 @@ import './App.css';
 
 function App() {
 
-  const [Heroes, setHeroes] = useState([])
+  const [Pokemons, setPokemons] = useState([])
 
 
 
   // Vanilla Javascript
-  const FetchHeroes = () => {
+  const FetchPokemons = () => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
       .then(response => {
         return response.json()
         //do something
       }).then((JsonResponse) => {
         console.log(JsonResponse)
-        setHeroes(JsonResponse.results)
+        setPokemons(JsonResponse.results)
       })
       .catch(err => {
         console.log(err);
@@ -28,14 +28,14 @@ function App() {
   return (
     <div className="App">
       <p></p>
-      <button onClick={FetchHeroes}>Fetch Pokemon</button>
+      <button onClick={FetchPokemons}>Fetch Pokemon</button>
       <hr />
 
       <ul>
         {
-          Heroes.map((hero) => {
+          Pokemons.map((Pokemon) => {
             return (
-                <li>{hero.name}</li>
+                <li>{Pokemon.name}</li>
             )
           })
         }
