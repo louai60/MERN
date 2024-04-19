@@ -1,0 +1,38 @@
+.container {
+    padding: 50px;
+}
+
+input {
+    padding: 20px 50px;
+    background-color: #efefef;
+    border: none;
+    border-radius: 10px;
+    margin-right: 20px;
+    font-size: medium;
+}
+
+.add {
+    background-color: #0019f8;
+    color: #fff;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    margin-left: 20px;
+    border-radius: 10px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+ul {
+    font-size: larger;
+    list-style-type: none;
+}
