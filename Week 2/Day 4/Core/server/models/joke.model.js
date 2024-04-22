@@ -5,7 +5,7 @@ const JokeSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    category: {
+    punchline: {
         type: String,
         default: 'general'
     }

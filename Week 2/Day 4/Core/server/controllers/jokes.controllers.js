@@ -25,8 +25,8 @@ module.exports = {
 
     // Create 
     createJoke: (req, res) => {
-        const { joke, category } = req.body;
-        const newJoke = new Joke({ joke, category });
+        const { joke, punchline } = req.body;
+        const newJoke = new Joke({ joke, punchline });
 
         newJoke.save()
             .then((savedJoke) => {
@@ -39,9 +39,9 @@ module.exports = {
 
     // Update
     updateJoke: (req, res) => {
-        const { joke, category } = req.body;
+        const { joke, punchline } = req.body;
 
-        Joke.findByIdAndUpdate(req.params.id, { joke, category }, { new: true })
+        Joke.findByIdAndUpdate(req.params.id, { joke, punchline }, { new: true })
             .then(updatedJoke => {
                 res.json(updatedJoke);
             })
