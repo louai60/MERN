@@ -7,7 +7,7 @@ const JokeSchema = new mongoose.Schema({
     },
     punchline: {
         type: String,
-        default: 'general'
+        default: 'Hhhhhhhhh'
     }
 }, { timestamps: true });
 
