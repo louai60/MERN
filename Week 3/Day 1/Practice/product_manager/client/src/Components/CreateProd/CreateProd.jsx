@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import AllProducts from '../AllProducts/AllProducts';
 
 
 
@@ -23,7 +24,7 @@ const CreateProd = () => {
       })
       .then((res) => {
         console.log('created Successfuly!')
-        nav('/')
+        nav("/products/" + res.data._id)
       })
       .catch((err) => {
         console.log(err)
@@ -54,6 +55,8 @@ const CreateProd = () => {
         Submit
       </Button>
     </Form>
+    <br /><br />
+    <AllProducts />
     
     </>
   )
