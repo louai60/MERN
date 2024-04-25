@@ -1,17 +1,28 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import PlanetPage from './PlanetDetails';
-import PeoplePage from './PeoplePage';
+import axios from 'axios';
 
 function HomePage() {
-  const [resource, setResource] = useState('characters');
+  const [resource, setResource] = useState('people');
   const [id, setId] = useState('');
-  const navigate = useNavigate();
+  const [data, setData] = useState(null);
+  const [error, setError] = useState('');
+
+  const fetchData = () => {
+    axios
+      .get(`https://www.swapi.tech/api/${resource}/${id}`)
+      .then((response) => {
+        setData(response.data);
+        setError('');
+      })
+      .catch((error) => {
+        setData(null);
+      });
+  };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
     if (id.trim() !== '') {
-      navigate(`/${resource}/${id}`);
+      fetchData();
     }
   };
 
@@ -25,8 +36,28 @@ function HomePage() {
         <input type="number" value={id} onChange={(e) => setId(e.target.value)} />
         <button type="submit">Search</button>
       </form>
-      {resource === 'people' && <PeoplePage />}
-      {resource === 'planets' && <PlanetPage />}
+      {error && <p>{error}</p>}
+      {data && (
+        <div>
+          {resource === 'people' && (
+            <>
+               <h2>{data.name}</h2>
+              <p>Height: {data.height}</p>
+              <p>Mass: {data.mass}</p>
+              <p>Gender: {data.gender}</p>
+            </>
+          )}
+          {resource === 'planets' && (
+            <>
+                  <h2>{data.name}</h2>
+                  <p>Climate: {data.climate}</p>
+                  <p>Terrain: {data.terrain}</p>
+                  <p>Surface Water: {data.surface_water}</p>
+                  <p>Population: {data.population}</p>
+            </>
+          )}
+        </div>
+      )}
     </>
   );
 }

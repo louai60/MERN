@@ -8,9 +8,8 @@ import './style.css'
 
 const CreateAuthors = () => {
     const [name, setName] = useState('')
-
-    // Error Handler
     const [error, setError] = useState([])
+    
     const nav = useNavigate()
 
     const submitHandler = (e) => {

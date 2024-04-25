@@ -1,15 +1,11 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import Button from 'react-bootstrap/Button';
 
 
 const UpdateNote = () => {
     const [name, setName] = useState("")
-
-    // Handel ERRORS 
     const [error, setError] = useState([])
-
 
     const nav = useNavigate()
     const { id } = useParams()
