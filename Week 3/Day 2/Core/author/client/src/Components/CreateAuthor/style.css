@@ -1,0 +1,25 @@
+.main__form {
+    padding: 50px;
+    border: 2px solid #706f6f;
+}
+
+div{
+    margin-bottom: 10px;
+}
+
+span {
+    color: blueviolet;
+}
+
+input {
+    width: 70%;
+}
+
+.btn {
+    background: #57f6ee;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
